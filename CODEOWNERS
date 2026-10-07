@@ -1,68 +1,29 @@
-🛡️ CODEOWNERS
-- github_basic
-
-Quantum‑Era / SecureOps Edition
-
-Ce fichier définit les responsables officiels du dépôt et les zones d’autorité.  
-Il garantit une gouvernance claire, une revue de code disciplinée et une sécurité renforcée.
-
----
-
-👑 Propriétaire global du projet
-
-`
+# CODEOWNERS — Définition des responsables du dépôt
+# Propriétaire global du projet
 * @teremuhamblin
-`
 
-> Autorité totale sur l’ensemble du dépôt : architecture, sécurité, design, CI/CD, documentation.
-
----
-
-🧩 Structure recommandée (optionnelle mais stylée)
-(Tu peux l’ajouter si tu veux un CODEOWNERS complet et modulaire)
-
-`
-
-─────────────────────────────────────────────
-
-CORE — Noyau du projet
-
-─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# Noyau du projet — Code source principal
+# ─────────────────────────────────────────────
 /src/ @teremuhamblin
 /lib/ @teremuhamblin
 
-─────────────────────────────────────────────
-
-DOCS — Documentation & gouvernance
-
-─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# Documentation & gouvernance
+# ─────────────────────────────────────────────
 /docs/ @teremuhamblin
 /README.md @teremuhamblin
 /SECURITY.md @teremuhamblin
 /CONTRIBUTING.md @teremuhamblin
 
-─────────────────────────────────────────────
-
-CI/CD — Automatisation & pipelines
-
-─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# CI/CD — Automatisation & pipelines
+# ─────────────────────────────────────────────
 /.github/ @teremuhamblin
 /.github/workflows/ @teremuhamblin
 
-─────────────────────────────────────────────
-
-CONFIG — Fichiers critiques
-
-─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# Fichiers critiques — Build, container, config
+# ─────────────────────────────────────────────
 /Makefile @teremuhamblin
 /Dockerfile @teremuhamblin
-`
-
----
-
-🔒 Sécurité & discipline
-
-- Le propriétaire global est responsable de la validation finale.  
-- Toute modification dans les zones critiques doit être revue par @teremuhamblin.  
-- Aucun fichier sensible ne doit être ajouté dans les zones couvertes par CODEOWNERS.  
-- Les PR doivent respecter les règles de sécurité définies dans SECURITY.md.
