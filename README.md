@@ -63,7 +63,7 @@ python src/app.py
 
 ### 📚 Documentation
 >La documentation complète se trouve dans :
-- 📄 docs/git_notes.md
+- 📄 ***docs/git_notes.md***
 
 ```md
 Elle contient :
@@ -79,7 +79,7 @@ Elle contient :
 
 ```text
 MIT License
-Copyright (c) 2026 Teremu
+Copyright (c) 2026
 ```
 
 ---
@@ -111,15 +111,3 @@ Copyright (c) 2026 Teremu
 </p>
 
 ---
-
-🎉 Ton README est maintenant digne d’un projet pro
-
-Il est :
-
-- structuré  
-- élégant  
-- technique  
-- administré  
-- avec un header et footer premium  
-- badges personnalisés  
-- style ingénierie système / OS administré
