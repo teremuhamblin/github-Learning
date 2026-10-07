@@ -1,29 +1,80 @@
 {
   "name": "github_basic",
-  "version": "0.4.0",
-  "description": "Projet pédagogique pour apprendre Git, GitHub, CI/CD et structuration professionnelle.",
+  "version": "1.0.0-ultra",
+  "description": "Projet Enterprise/Military Zero-Trust pour Git, GitHub, CI/CD, sécurité, audit, conformité et structuration professionnelle.",
   "author": "Teremu",
   "license": "MIT",
   "type": "module",
+  "private": true,
 
   "scripts": {
     "start": "python3 src/app.py",
     "demo": "python3 src/examples/demo.py",
 
-    "lint": "ruff check .",
+    "lint": "ruff check . && eslint .",
     "format": "black .",
-    "test": "pytest",
+    "test": "pytest --disable-warnings --maxfail=1",
+
+    "security:scan": "node scripts/security-scan.js",
+    "security:audit": "npm audit --audit-level=high",
+    "security:deep": "node scripts/security-deep-audit.js",
+    "security:integrity": "node scripts/check-integrity.js",
+    "security:zero-trust": "node scripts/zero-trust-enforcer.js",
 
     "docs:build": "node scripts/build-docs.js",
     "docs:check": "node scripts/check-docs.js",
 
     "project:overview": "node scripts/generate-overview.js",
-    "project:validate": "node scripts/validate-structure.js"
+    "project:validate": "node scripts/validate-structure.js",
+    "project:compliance": "node scripts/check-compliance.js",
+
+    "clean": "rm -rf dist build .cache *.log __pycache__",
+    "precommit": "npm-run-all lint test security:scan security:integrity"
   },
 
   "devDependencies": {
     "chalk": "^5.3.0",
     "marked": "^12.0.0",
-    "fs-extra": "^11.2.0"
+    "fs-extra": "^11.2.0",
+
+    "eslint": "^9.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+
+    "npm-run-all": "^4.1.5"
+  },
+
+  "engines": {
+    "node": ">=18.0.0"
+  },
+
+  "security": {
+    "zeroTrust": true,
+    "strictMode": true,
+    "auditLevel": "high",
+    "enforcePrecommit": true,
+    "blockPublish": true,
+    "integrityChecks": true,
+    "dependencyFreeze": true
+  },
+
+  "governance": {
+    "codeowners": true,
+    "branchProtection": true,
+    "requireReviews": true,
+    "requireStatusChecks": true,
+    "requireSignedCommits": true,
+    "requireConventionalCommits": true,
+    "enforceChangelog": true
+  },
+
+  "compliance": {
+    "iso27001": true,
+    "soc2": true,
+    "gdpr": true,
+    "supplyChainSecurity": true,
+    "dependencyAttestation": true
   }
 }

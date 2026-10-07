@@ -1,4 +1,29 @@
-# CODEOWNERS — définit les responsables du dépôt
+# CODEOWNERS — Définition des responsables du dépôt
+# Propriétaire global du projet
+* @teremuhamblin
 
-# Propriétaire principal du projet
-* @teremuhamblin 
+# ─────────────────────────────────────────────
+# Noyau du projet — Code source principal
+# ─────────────────────────────────────────────
+/src/ @teremuhamblin
+/lib/ @teremuhamblin
+
+# ─────────────────────────────────────────────
+# Documentation & gouvernance
+# ─────────────────────────────────────────────
+/docs/ @teremuhamblin
+/README.md @teremuhamblin
+/SECURITY.md @teremuhamblin
+/CONTRIBUTING.md @teremuhamblin
+
+# ─────────────────────────────────────────────
+# CI/CD — Automatisation & pipelines
+# ─────────────────────────────────────────────
+/.github/ @teremuhamblin
+/.github/workflows/ @teremuhamblin
+
+# ─────────────────────────────────────────────
+# Fichiers critiques — Build, container, config
+# ─────────────────────────────────────────────
+/Makefile @teremuhamblin
+/Dockerfile @teremuhamblin
