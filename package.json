@@ -1,7 +1,7 @@
 {
   "name": "github_basic",
-  "version": "1.0.0-ultra",
-  "description": "Projet Enterprise/Military Zero-Trust pour Git, GitHub, CI/CD, sécurité, audit, conformité et structuration professionnelle.",
+  "version": "2.0.0-quantum",
+  "description": "Framework Enterprise/Military Zero-Trust pour GitHub, CI/CD, sécurité, audit, conformité, gouvernance et supply-chain.",
   "author": "Teremu",
   "license": "MIT",
   "type": "module",
@@ -12,7 +12,7 @@
     "demo": "python3 src/examples/demo.py",
 
     "lint": "ruff check . && eslint .",
-    "format": "black .",
+    "format": "black . && prettier --write .",
     "test": "pytest --disable-warnings --maxfail=1",
 
     "security:scan": "node scripts/security-scan.js",
@@ -20,16 +20,20 @@
     "security:deep": "node scripts/security-deep-audit.js",
     "security:integrity": "node scripts/check-integrity.js",
     "security:zero-trust": "node scripts/zero-trust-enforcer.js",
+    "security:sast": "node scripts/sast.js",
+    "security:secrets": "node scripts/secrets-detect.js",
 
     "docs:build": "node scripts/build-docs.js",
     "docs:check": "node scripts/check-docs.js",
+    "docs:serve": "node scripts/serve-docs.js",
 
     "project:overview": "node scripts/generate-overview.js",
     "project:validate": "node scripts/validate-structure.js",
     "project:compliance": "node scripts/check-compliance.js",
+    "project:sign": "node scripts/sign-artifacts.js",
 
     "clean": "rm -rf dist build .cache *.log __pycache__",
-    "precommit": "npm-run-all lint test security:scan security:integrity"
+    "precommit": "npm-run-all lint test security:scan security:integrity security:secrets"
   },
 
   "devDependencies": {
@@ -43,7 +47,8 @@
     "eslint-plugin-n": "^16.0.0",
     "eslint-plugin-promise": "^6.1.1",
 
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.2.5"
   },
 
   "engines": {
@@ -57,7 +62,9 @@
     "enforcePrecommit": true,
     "blockPublish": true,
     "integrityChecks": true,
-    "dependencyFreeze": true
+    "dependencyFreeze": true,
+    "secretDetection": true,
+    "sast": true
   },
 
   "governance": {
@@ -67,7 +74,8 @@
     "requireStatusChecks": true,
     "requireSignedCommits": true,
     "requireConventionalCommits": true,
-    "enforceChangelog": true
+    "enforceChangelog": true,
+    "artifactSigning": true
   },
 
   "compliance": {
@@ -75,6 +83,7 @@
     "soc2": true,
     "gdpr": true,
     "supplyChainSecurity": true,
-    "dependencyAttestation": true
+    "dependencyAttestation": true,
+    "artifactIntegrity": true
   }
 }
