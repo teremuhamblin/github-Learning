@@ -1,9 +1,11 @@
 ###### README.md >> markdown 
 # 🛡️📘 Enterprise
+```text
 - Edition
 - Projet
    - github_basic
    - système d’apprentissage Git/GitHub Professionnel
+```
 
 <p align="center">
   <strong>Version stable</strong> • <strong>Zero‑Trust</strong> • <strong>Enterprise‑Grade</strong> •
@@ -24,19 +26,19 @@
 ---
 
 ### 🧩 Présentation du projet
-
+```text
 > github_basic est un environnement d’apprentissage professionnel conçu pour enseigner Git & GitHub avec une approche Ingénierie Système, Enterprise‑Grade, et Military‑Ops.
 - Il inclut :  
    > - une structure de dépôt disciplinée,  
    > - des workflows CI/CD robustes,  
    > - des outils de sécurité Zero‑Trust,  
    > - une documentation claire et opérationnelle.
+```
 
 ---
 
 ### 🎯 Objectifs pédagogiques
 - Doctrine Enterprise/Military
-
 ```markdown
 - Maîtriser Git comme un ingénieur système (commits, branches, merges, historique)
 - Comprendre GitHub comme un opérateur DevSecOps (remote, PR, issues, workflows)
@@ -49,7 +51,6 @@
 
 ### 🗂️ Structure du dépôt
 - Architecture Quantum‑Era
-
 ```text
 github_basic/
 ├─ src/                 → Code source pédagogique
@@ -66,7 +67,6 @@ github_basic/
 ---
 
 ### 🚀 Démarrer le projet
-
 ```bash
 git clone https://github.com/Teremu/github_basic.git
 cd github_basic
@@ -76,13 +76,11 @@ python3 src/app.py
 ---
 
 ### 📚 Documentation
-
 - La documentation complète se trouve dans :
-
+```md
    - ***docs/git_notes.md***
-
+```
 - Elle contient :
-
 ```md
 - Commandes Git essentielles
 - Workflows professionnels (GitOps, CI/CD)
@@ -94,8 +92,7 @@ python3 src/app.py
 
 ### 🔐 Sécurité
 - Zero‑Trust Military‑Ops
-
-- Ce projet applique une doctrine de sécurité stricte :
+   - Ce projet applique une doctrine de sécurité stricte :
 ```text
    - Zero‑Trust : aucune confiance implicite  
    - Audit continu : scripts security:scan, security:deep, security:integrity  
@@ -109,27 +106,25 @@ python3 src/app.py
 
 ### ⚙️ CI/CD 
 >Pipelines Enterprise‑Grade
-
-- Badges CI :
-
+   - Badges CI :
 ###### https://github.com/teremuhamblin/githubbasic/actions/workflows/ci.yml
 ###### https://github.com/teremuhamblin/githubbasic/actions/workflows/basic.yml
 ###### https://github.com/teremuhamblin/githubbasic/actions/workflows/node.js.yml
 ###### https://github.com/teremuhamblin/githubbasic/actions/workflows/full.yml
 
 - Fonctionnalités CI/CD :
-
+```text
    > - Tests automatiques  
    > - Audit de sécurité  
    > - Analyse statique  
    > - Validation structurelle  
    > - Conformité Enterprise  
    > - Pipeline Zero‑Trust
+```
 
 ---
 
 ### 🧩 Licence
-
 ```text
 MIT License
 Copyright (c) 2026
